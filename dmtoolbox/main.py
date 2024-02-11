@@ -11,6 +11,6 @@ def calculate_attack_roll(
 ) -> int:
     match (monster_ac, character_level, character_class):
         case (_, 0, _) :
-            return max(20,20-monster_ac)
+            return min(20,20-monster_ac)
         case _:
             raise ValueError("Calculated_attac_roll not implemented")
