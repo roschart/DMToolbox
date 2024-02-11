@@ -13,8 +13,8 @@ def calculate_attack_roll(
         match character_class:
             case "Cleric" | "Thief":
                 limits = [3, 5, 8, 10, 11, 12, 14, 16, 18, 20]
-                for i, l in enumerate(limits):
-                    if character_level <= l:
+                for i, limit in enumerate(limits):
+                    if character_level <= limit:
                         return i + 1
                 return len(limits)+1
         return 0
