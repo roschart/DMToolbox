@@ -5,7 +5,11 @@ from dmtoolbox.main import calculate_attack_roll
 @pytest.mark.parametrize("monster_ac, character_level, character_class, expected", [
     (6, 0, "Any", 14),
     (-4, 1, "Thief", 20),
+    (0, 1, "Thief", 19),
     (-4, 13, "Cleric", 17),
+    (9, 20, "Cleric", 2),
+    (9, 15, "Cleric", 3),
+    (9, 22, "Cleric", 2),
     (9, 4, "Elf", 8),
 ])
 def test_calculate_attack_roll_success_cases(monster_ac, character_level, character_class, expected):
