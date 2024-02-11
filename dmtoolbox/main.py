@@ -28,12 +28,6 @@ def calculate_attack_roll(
     match (monster_ac, character_level, character_class):
         case (_, 0, _):
             return max(2, min(20, 20 - monster_ac))
-        case (_, _, "Cleric" | "Thief"):
-            r = calculate_row(character_level, character_class)
-            return max(2, min(20, 20 - monster_ac - r))
-        case (_,_, "Withard"):
-            r = calculate_row(character_level, character_class)
-            return max(2, min(20, 20 - monster_ac - r))
         case _:
             r = calculate_row(character_level, character_class)
             return max(2, min(20, 20 - monster_ac - r))
