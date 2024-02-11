@@ -8,9 +8,9 @@ def main():
     
     # Define subcomando "attack"
     parser_attack = subparsers.add_parser("attack", help="Calculate attack roll")
-    parser_attack.add_argument("--character-class", required=True, help="Character class")
-    parser_attack.add_argument("--ac", type=int, required=True, help="Monster AC")
-    parser_attack.add_argument("--level", type=int, required=True, help="Character level")
+    parser_attack.add_argument("-c","--character-class", required=True, help="Character class")
+    parser_attack.add_argument("-a","--ac", type=int, required=True, help="Monster AC")
+    parser_attack.add_argument("-l","--level", type=int, required=True, help="Character level")
     
     args = parser.parse_args()
 

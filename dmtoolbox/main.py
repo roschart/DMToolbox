@@ -5,7 +5,6 @@ CharacterClass = Literal[
     "Cleric", "Elf", "Dwarf", "Ranger", "Warrior", "Thief", "Halfling", "Wizard", "Paladin"
 ]
 
-
 def calculate_attack_roll(
     monster_ac: int, character_level: int, character_class: CharacterClass
 ) -> int:
@@ -14,7 +13,7 @@ def calculate_attack_roll(
         match character_class:
             case "Cleric" | "Thief":
                 limits = [3, 5, 8, 10, 11, 12, 14, 16, 18, 20]
-            case "Withard":
+            case "Wizard":
                 limits = [3, 7, 10, 12, 13, 15, 18, 20, 23, 24]
             case _:
                 limits = [2, 3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18]

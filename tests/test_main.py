@@ -11,7 +11,7 @@ from dmtoolbox.main import calculate_attack_roll
     (9, 15, "Cleric", 3),
     (9, 22, "Cleric", 2),
     (9, 4, "Elf", 8),
-    (5,11,"Withard",11),
+    (5,11,"Wizard",11),
     (0,23,"Paladin",4)
 ])
 def test_calculate_attack_roll_success_cases(monster_ac, character_level, character_class, expected):
