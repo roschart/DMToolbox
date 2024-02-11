@@ -5,7 +5,7 @@ CharacterClass = Literal[
     "Cleric", "Elf", "Dwarf", "Ranger", "Warrior", "Thief", "Halfling", "Wizard", "Paladin"
 ]
 
-CharacterClassSet= set([
+character_class_set= set([
     "Cleric", "Elf", "Dwarf", "Ranger", "Warrior", "Thief", "Halfling", "Wizard", "Paladin"
 ])
 
@@ -28,7 +28,7 @@ def calculate_attack_roll(
 
     if not (-6 <= monster_ac <= 9):
         raise ValueError("Monster AC must be between -6 and 9.")
-    if character_class not in CharacterClassSet:
+    if character_class not in character_class_set:
         raise ValueError(f"{character_class} is not a valid class")
     r = 0
     if character_level > 0:

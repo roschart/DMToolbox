@@ -3,7 +3,7 @@ import pytest
 from dmtoolbox.main import calculate_attack_roll
 
 @pytest.mark.parametrize("monster_ac, character_level, character_class, expected", [
-    (6, 0, "Any", 14),
+    (6, 0, "Warrior", 14),
     (-4, 1, "Thief", 20),
     (0, 1, "Thief", 19),
     (-4, 13, "Cleric", 17),
@@ -19,6 +19,7 @@ def test_calculate_attack_roll_success_cases(monster_ac, character_level, charac
 @pytest.mark.parametrize("monster_ac, character_level, character_class", [
     (-7, 1, "Thief"),  # CA fuera de rango
     (10, 1, "Cleric"),  # CA fuera de rango
+    (6, 0, "Any"), # Not valid character_class
 ])
 def test_calculate_attack_roll_ca_out_of_range(monster_ac, character_level, character_class):
     with pytest.raises(ValueError):
