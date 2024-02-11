@@ -2,7 +2,7 @@ from typing import Literal
 
 # Alias for the character class type
 CharacterClass = Literal[
-    "Cleric", "Elf", "Dwarf", "Ranger", "Warrior", "Thief", "Halfling", "Wizard"
+    "Cleric", "Elf", "Dwarf", "Ranger", "Warrior", "Thief", "Halfling", "Wizard", "Paladin"
 ]
 
 
