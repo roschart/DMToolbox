@@ -8,15 +8,14 @@ def main():
     
     # Define subcomando "attack"
     parser_attack = subparsers.add_parser("attack", help="Calculate attack roll")
-    parser_attack.add_argument("--class", required=True, help="Character class")
+    parser_attack.add_argument("--character-class", required=True, help="Character class")
     parser_attack.add_argument("--ac", type=int, required=True, help="Monster AC")
     parser_attack.add_argument("--level", type=int, required=True, help="Character level")
     
     args = parser.parse_args()
-    args_dict = vars(args)
 
     if args.command == "attack":
-        result = calculate_attack_roll(args.ac, args.level, args_dict["class"])
+        result = calculate_attack_roll(args.ac, args.level, args.character_class)
         print(f"Attack roll needed: {result}")
 
 if __name__ == "__main__":
