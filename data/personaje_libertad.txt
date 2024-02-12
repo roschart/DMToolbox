@@ -1,0 +1,63 @@
+jugador: Libertad
+clase: Clerigo
+Alineamiento: Legal
+
+Caracteristicas
+fueza:14 (+1)
+destreza: 11
+constitucion: 16 (+2)
+inteligencia: 10
+sabiduría: 16 (+2)
+carisma: 9
+Tiradas de salvacion
+veneno: 11
+varitas mágicas: 12 +2
+petrificacion o palalisis: 14
+aliento dragon: 16
+Sortilegios, varas y baculos: 15 +2
+
+Clase Armadura
+Cota de mayas: 5
+Escudo: -1
+Sorprendido:
+Otros
+Total: 4
+
+Puntos de Golpe: 6
+
+Iniciativa: Des: 0 Miscelanea:0
+
+Conjurosç
+1:1
+2:0
+3:0
+4:0
+5:0
+6:0
+
+Armas de combate
+Baston: Fuerza:1 Magia:0 
+        Daño: dado:8 fuerza +1 magia:0
+
+Movimiento
+Base: 30
+Combate: 10
+Carrera: 60
+Cargado: 15
+
+Habilidades
+Sorprendido: 1-2
+Escuchar ruidos: 1
+Derribar puertas: 1-2
+Detectar puertas secretas: Esp
+Detectar trampas y fosos: 1
+Rastrear en exteriores: Esp
+Rastrear en interiores: Esp
+Ocultarse: Esp
+
+PX
+
+NEC
+
+Tesoro
+
