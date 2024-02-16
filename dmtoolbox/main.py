@@ -1,13 +1,16 @@
 from typing import Literal
+from enum import Enum
 
-# Alias for the character class type
-CharacterClass = Literal[
-    "Cleric", "Elf", "Dwarf", "Ranger", "Warrior", "Thief", "Halfling", "Wizard", "Paladin"
-]
-
-character_class_set= set([
-    "Cleric", "Elf", "Dwarf", "Ranger", "Warrior", "Thief", "Halfling", "Wizard", "Paladin"
-])
+class CharacterClass(Enum):
+    CLERIC = "CLERIC"
+    ELF = "ELF"
+    DWARF = "DWARF"
+    RANGER = "RANGER"
+    WARRIOR = "WARRIOR"
+    THIEF = "THIEF"
+    HALFLING = "HALFLING"
+    WIZARD = "WIZARD"
+    PALADIN = "PALADIN"
 
 def calculate_attack_roll(
     monster_ac: int, character_level: int, character_class: CharacterClass
@@ -15,9 +18,9 @@ def calculate_attack_roll(
     def calculate_row(character_level: int, character_class: CharacterClass) -> int:
         limits: list[int]
         match character_class:
-            case "Cleric" | "Thief":
+            case  CharacterClass.CLERIC|CharacterClass.THIEF:
                 limits = [3, 5, 8, 10, 11, 12, 14, 16, 18, 20]
-            case "Wizard":
+            case CharacterClass.WIZARD:
                 limits = [3, 7, 10, 12, 13, 15, 18, 20, 23, 24]
             case _:
                 limits = [2, 3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18]
@@ -28,8 +31,6 @@ def calculate_attack_roll(
 
     if not (-6 <= monster_ac <= 9):
         raise ValueError("Monster AC must be between -6 and 9.")
-    if character_class not in character_class_set:
-        raise ValueError(f"{character_class} is not a valid class")
     r = 0
     if character_level > 0:
         r = calculate_row(character_level, character_class)
