@@ -1,6 +1,6 @@
 # dmtoolbox/__main__.py
 import argparse
-from .main import calculate_attack_roll, CharacterClass
+from .main import calculate_pj_attack_roll, CharacterClass
 
 
 def main():
@@ -25,7 +25,7 @@ def main():
     args = parser.parse_args()
 
     if args.command == "attack":
-        result = calculate_attack_roll(args.ac, args.level, args.character_class)
+        result = calculate_pj_attack_roll(args.ac, args.level, args.character_class)
         print(f"Attack roll needed: {result}")
 
 
